@@ -38,7 +38,7 @@ class WeatherScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            '300° F',
+                            '300°k',
                             style: TextStyle(
                               fontSize: 32,
                               fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class WeatherScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
 
             // cards
@@ -88,11 +88,31 @@ class WeatherScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
+                  HourlyForecastItem(
+                    time: '03:00',
+                    temperature: '303',
+                    icon: Icons.cloud,
+                  ),
+                  HourlyForecastItem(
+                    time: '06:00',
+                    temperature: '320',
+                    icon: Icons.cloud,
+                  ),
+                  HourlyForecastItem(
+                    time: '09:00',
+                    temperature: '298',
+                    icon: Icons.cloudy_snowing,
+                  ),
+                  HourlyForecastItem(
+                    time: '12:00',
+                    temperature: '303',
+                    icon: Icons.sunny,
+                  ),
+                  HourlyForecastItem(
+                    time: '15:00',
+                    temperature: '303',
+                    icon: Icons.cloud,
+                  ),
                 ],
               ),
             ),
@@ -111,9 +131,9 @@ class WeatherScreen extends StatelessWidget {
             ),
 
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(16.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   AdditionalInfoItem(
                     icon: Icons.water_drop,
