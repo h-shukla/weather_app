@@ -1,6 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:weather_app/additional_info_item.dart';
+import 'package:weather_app/hourly_forecast_item.dart';
 
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
@@ -82,9 +83,58 @@ class WeatherScreen extends StatelessWidget {
               height: 20,
             ),
 
+            // cards
+            const SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  HourlyForecastItem(),
+                  HourlyForecastItem(),
+                  HourlyForecastItem(),
+                  HourlyForecastItem(),
+                  HourlyForecastItem(),
+                ],
+              ),
+            ),
+
+            const SizedBox(
+              height: 20,
+            ),
+
             // additional information
-            const Placeholder(
-              fallbackHeight: 150,
+            const Text(
+              'Additional Information',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AdditionalInfoItem(
+                    icon: Icons.water_drop,
+                    label: 'Humidity',
+                    value: '94',
+                  ),
+                  AdditionalInfoItem(
+                    icon: Icons.air,
+                    label: 'Wind Speed',
+                    value: '7.67',
+                  ),
+                  AdditionalInfoItem(
+                    icon: Icons.umbrella,
+                    label: 'Pressure',
+                    value: '1006',
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),
