@@ -18,3 +18,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+/*
+  Constraints go down
+  Sizes go Up
+  Parent sets Position
+*/
