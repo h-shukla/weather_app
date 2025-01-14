@@ -1,1 +1,1 @@
-vid: https://youtu.be/CzRQ9mnmh44?t=54278
+vid: https://youtu.be/CzRQ9mnmh44?t=57415
