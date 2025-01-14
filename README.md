@@ -1,1 +1,2 @@
-vid: https://youtu.be/CzRQ9mnmh44?t=57415
+# Weather App
+This is a weather app built using flutter and [Weather API](https://openweathermap.org/api)
